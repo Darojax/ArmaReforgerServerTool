@@ -12,7 +12,7 @@
         public override object ParameterValue
         {
             get => parameterValue.Value;
-            set => parameterValue.Value = (Int32) value;
+            set => parameterValue.Value = Convert.ToInt32(value);
         }
 
         public decimal ParameterMin

@@ -99,6 +99,17 @@
             steamCmdLog = new TextBox();
             steamCmdAlert = new Label();
             downloadSteamCmdBtn = new Button();
+            tabPage3 = new TabPage();
+            groupBox6 = new GroupBox();
+            rconSendBtn = new Button();
+            rconCmdTB = new TextBox();
+            rconConsole = new TextBox();
+            groupBox5 = new GroupBox();
+            serverParameterNumeric2 = new ServerParameterNumeric();
+            serverParameterNumeric1 = new ServerParameterNumeric();
+            serverParameterBool1 = new ServerParameterBool();
+            serverParameterString1 = new ServerParameterString();
+            serverParameterSelect1 = new ServerParameterSelect();
             tabControl1.SuspendLayout();
             tabPage1.SuspendLayout();
             groupBox2.SuspendLayout();
@@ -116,6 +127,9 @@
             ((System.ComponentModel.ISupportInitialize)streamingBudgetUpDown).BeginInit();
             ((System.ComponentModel.ISupportInitialize)overridePortNumericUpDown).BeginInit();
             groupBox3.SuspendLayout();
+            tabPage3.SuspendLayout();
+            groupBox6.SuspendLayout();
+            groupBox5.SuspendLayout();
             SuspendLayout();
             // 
             // tabControl1
@@ -123,6 +137,7 @@
             tabControl1.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             tabControl1.Controls.Add(tabPage1);
             tabControl1.Controls.Add(tabPage2);
+            tabControl1.Controls.Add(tabPage3);
             tabControl1.Location = new Point(12, 12);
             tabControl1.Name = "tabControl1";
             tabControl1.SelectedIndex = 0;
@@ -900,6 +915,132 @@
             downloadSteamCmdBtn.UseVisualStyleBackColor = true;
             downloadSteamCmdBtn.Click += DownloadSteamCmdBtnPressed;
             // 
+            // tabPage3
+            // 
+            tabPage3.Controls.Add(groupBox6);
+            tabPage3.Controls.Add(groupBox5);
+            tabPage3.Location = new Point(4, 24);
+            tabPage3.Name = "tabPage3";
+            tabPage3.Padding = new Padding(3);
+            tabPage3.Size = new Size(1518, 750);
+            tabPage3.TabIndex = 2;
+            tabPage3.Text = "RCon";
+            tabPage3.UseVisualStyleBackColor = true;
+            // 
+            // groupBox6
+            // 
+            groupBox6.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
+            groupBox6.Controls.Add(rconSendBtn);
+            groupBox6.Controls.Add(rconCmdTB);
+            groupBox6.Controls.Add(rconConsole);
+            groupBox6.Location = new Point(473, 6);
+            groupBox6.Name = "groupBox6";
+            groupBox6.Size = new Size(1039, 738);
+            groupBox6.TabIndex = 4;
+            groupBox6.TabStop = false;
+            groupBox6.Text = "Console";
+            // 
+            // rconSendBtn
+            // 
+            rconSendBtn.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
+            rconSendBtn.Location = new Point(958, 709);
+            rconSendBtn.Name = "rconSendBtn";
+            rconSendBtn.Size = new Size(75, 23);
+            rconSendBtn.TabIndex = 3;
+            rconSendBtn.Text = "Send";
+            rconSendBtn.UseVisualStyleBackColor = true;
+            // 
+            // rconCmdTB
+            // 
+            rconCmdTB.Anchor = AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
+            rconCmdTB.Location = new Point(6, 709);
+            rconCmdTB.Name = "rconCmdTB";
+            rconCmdTB.Size = new Size(946, 23);
+            rconCmdTB.TabIndex = 2;
+            // 
+            // rconConsole
+            // 
+            rconConsole.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
+            rconConsole.Location = new Point(6, 22);
+            rconConsole.Multiline = true;
+            rconConsole.Name = "rconConsole";
+            rconConsole.ReadOnly = true;
+            rconConsole.ScrollBars = ScrollBars.Vertical;
+            rconConsole.Size = new Size(1027, 681);
+            rconConsole.TabIndex = 1;
+            // 
+            // groupBox5
+            // 
+            groupBox5.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left;
+            groupBox5.Controls.Add(serverParameterSelect1);
+            groupBox5.Controls.Add(serverParameterNumeric2);
+            groupBox5.Controls.Add(serverParameterNumeric1);
+            groupBox5.Controls.Add(serverParameterBool1);
+            groupBox5.Controls.Add(serverParameterString1);
+            groupBox5.Location = new Point(6, 6);
+            groupBox5.Name = "groupBox5";
+            groupBox5.Size = new Size(461, 738);
+            groupBox5.TabIndex = 0;
+            groupBox5.TabStop = false;
+            groupBox5.Text = "Parameters";
+            // 
+            // serverParameterNumeric2
+            // 
+            serverParameterNumeric2.Location = new Point(6, 130);
+            serverParameterNumeric2.Name = "serverParameterNumeric2";
+            serverParameterNumeric2.ParameterFriendlyName = "Max Clients";
+            serverParameterNumeric2.ParameterIncrement = new decimal(new int[] { 1, 0, 0, 0 });
+            serverParameterNumeric2.ParameterMax = new decimal(new int[] { 16, 0, 0, 0 });
+            serverParameterNumeric2.ParameterMin = new decimal(new int[] { 1, 0, 0, 0 });
+            serverParameterNumeric2.ParameterName = "maxClients";
+            serverParameterNumeric2.ParameterValue = new decimal(new int[] { 16, 0, 0, 0 });
+            serverParameterNumeric2.Size = new Size(449, 30);
+            serverParameterNumeric2.TabIndex = 3;
+            // 
+            // serverParameterNumeric1
+            // 
+            serverParameterNumeric1.Location = new Point(6, 94);
+            serverParameterNumeric1.Name = "serverParameterNumeric1";
+            serverParameterNumeric1.ParameterFriendlyName = "RCon Port";
+            serverParameterNumeric1.ParameterIncrement = new decimal(new int[] { 1, 0, 0, 0 });
+            serverParameterNumeric1.ParameterMax = new decimal(new int[] { 65535, 0, 0, 0 });
+            serverParameterNumeric1.ParameterMin = new decimal(new int[] { 1, 0, 0, 0 });
+            serverParameterNumeric1.ParameterName = "port";
+            serverParameterNumeric1.ParameterValue = new decimal(new int[] { 19999, 0, 0, 0 });
+            serverParameterNumeric1.Size = new Size(449, 30);
+            serverParameterNumeric1.TabIndex = 2;
+            // 
+            // serverParameterBool1
+            // 
+            serverParameterBool1.AssociatedControl = null;
+            serverParameterBool1.Location = new Point(6, 22);
+            serverParameterBool1.Name = "serverParameterBool1";
+            serverParameterBool1.ParameterFriendlyName = "RCon Enabled";
+            serverParameterBool1.ParameterName = "rcon";
+            serverParameterBool1.ParameterValue = false;
+            serverParameterBool1.Size = new Size(449, 30);
+            serverParameterBool1.TabIndex = 1;
+            // 
+            // serverParameterString1
+            // 
+            serverParameterString1.Location = new Point(6, 58);
+            serverParameterString1.Name = "serverParameterString1";
+            serverParameterString1.ParameterFriendlyName = "RCon Address";
+            serverParameterString1.ParameterName = "address";
+            serverParameterString1.ParameterValue = "";
+            serverParameterString1.Size = new Size(449, 30);
+            serverParameterString1.TabIndex = 0;
+            // 
+            // serverParameterSelect1
+            // 
+            serverParameterSelect1.Location = new Point(6, 166);
+            serverParameterSelect1.Name = "serverParameterSelect1";
+            serverParameterSelect1.ParameterFriendlyName = "Permission";
+            serverParameterSelect1.ParameterName = "permission";
+            serverParameterSelect1.ParameterValue = "";
+            serverParameterSelect1.Size = new Size(449, 30);
+            serverParameterSelect1.TabIndex = 4;
+            // 
             // ReforgerServerApp
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
@@ -932,6 +1073,10 @@
             ((System.ComponentModel.ISupportInitialize)overridePortNumericUpDown).EndInit();
             groupBox3.ResumeLayout(false);
             groupBox3.PerformLayout();
+            tabPage3.ResumeLayout(false);
+            groupBox6.ResumeLayout(false);
+            groupBox6.PerformLayout();
+            groupBox5.ResumeLayout(false);
             ResumeLayout(false);
         }
 
@@ -1009,5 +1154,16 @@
         private CheckBox loadSessionSave;
         private Button editAdminListBtn;
         private FlowLayoutPanel serverParameters;
+        private TabPage tabPage3;
+        private GroupBox groupBox5;
+        private GroupBox groupBox6;
+        private Button rconSendBtn;
+        private TextBox rconCmdTB;
+        private TextBox rconConsole;
+        private ServerParameterNumeric serverParameterNumeric2;
+        private ServerParameterNumeric serverParameterNumeric1;
+        private ServerParameterBool serverParameterBool1;
+        private ServerParameterString serverParameterString1;
+        private ServerParameterSelect serverParameterSelect1;
     }
 }

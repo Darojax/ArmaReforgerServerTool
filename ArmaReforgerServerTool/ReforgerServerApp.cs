@@ -349,7 +349,7 @@ namespace ReforgerServerApp
                     .WithDisableCrashReporter(Convert.ToBoolean(configParams["disableCrashReporter"]))
                     .WithMissionHeader(configParams["missionHeader"])
                     .WithAdmins(configParams["admins"]);
-                    
+
                 try
                 {
                     string[] modEntries = File.ReadAllLines(configParams["modCollection"]);
